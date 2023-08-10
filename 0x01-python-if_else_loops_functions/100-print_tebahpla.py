@@ -2,5 +2,5 @@
 """"Print the alphabet in reverse order alternating upper- and lower-case."""
 i = 0
 for char in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(c - i)), end="")
+    print("{}".format(chr(char - i)), end="")
     i = 32 if i == 0 else 0
