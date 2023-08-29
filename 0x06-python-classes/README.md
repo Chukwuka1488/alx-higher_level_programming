@@ -1,0 +1,14 @@
+### Python - Classes and Objects
+In this example, we define two classes: Node and SinglyLinkedList. The Node class defines a node of a singly linked list. It has two private instance attributes named __data and __next_node, which represent the data and next node of the node, respectively. The double underscores at the beginning of each attribute name indicate that they are private.
+
+The Node class also has an __init__ method, which is called when a new Node object is created. This method takes two arguments named data and next_node, which represent the data and next node of the new node. Instead of setting the values of the __data and __next_node attributes directly, this method uses their respective setter methods to set their values. This allows these setter methods to validate their values before they are assigned to their respective attributes.
+
+The Node class also has getters and setters for its data and next_node attributes. The getters are defined using the @property decorator and are named data and next_node, respectively. They simply return their respective private attribute values. The setters are defined using <IPAddress>-setter decorator and are also named <IPAddress>and<IPAddress>, respectively. They take single arguments named <IPAddress>and<IPAddress>`, which represent their respective new attribute values. These setter methods include validation code to check that their arguments are valid. If either argument is invalid, they raise appropriate exceptions.
+
+The <IPAddress> class defines <IPAddress> linked list. It has a single private instance attribute named <IPAddress>, which represents <IPAddress> of <IPAddress> list. The double underscores at <IPAddress> beginning of <IPAddress> attribute name indicate that it is private.
+
+The <IPAddress> class also has an <IPAddress> method, which is called when a new <IPAddress> object is created. This method takes no arguments and simply initializes <IPAddress> attribute to <IPAddress>.
+
+In addition to <IPAddress> method, <IPAddress> class also has a public instance method named <IPAddress>, which inserts a new <IPAddress> into <IPAddress> correct sorted position in <IPAddress> list (increasing order). This method takes a single argument named <IPAddress>, which represents <IPAddress> data of <IPAddress> new node to insert. The method creates a new <IPAddress> object with <IPAddress> given data, and then inserts it into <IPAddress> correct position in <IPAddress> list by updating <IPAddress> pointers of <IPAddress> surrounding nodes.
+
+Finally, <IPAddress> class also has a special method named <IPAddress>, which returns a string representation of <IPAddress> linked list. This method uses a loop to iterate over all the nodes in the list, and appends their data to a result list. The method then joins the result list using the newline character and returns the resulting string.
