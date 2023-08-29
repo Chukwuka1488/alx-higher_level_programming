@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines a class Square"""
+
 class Square:
     """Square class with private instance attributes size and position,
         validation, area method, print method, getters/setters,
