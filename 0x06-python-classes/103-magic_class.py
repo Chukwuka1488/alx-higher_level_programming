@@ -1,5 +1,5 @@
 import math
-
+import dis
 
 class MagicClass:
     def __init__(self, radius=0):
@@ -13,3 +13,15 @@ class MagicClass:
 
     def circumference(self):
         return 2 * math.pi * self.__radius
+
+# Disassemble the __init__ method
+print("Disassembly of __init__:")
+dis.dis(MagicClass.__init__)
+
+# Disassemble the area method
+print("\nDisassembly of area:")
+dis.dis(MagicClass.area)
+
+# Disassemble the circumference method
+print("\nDisassembly of circumference:")
+dis.dis(MagicClass.circumference)
