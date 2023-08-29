@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 class Square:
     """Square class with private instance attribute size, validation,
         area method, getter/setter, and comparison methods
@@ -11,15 +10,13 @@ class Square:
             size (int or float): The size of the new square, must be a
             number >= 0.
         """
-        self.size = size
+        self.__size = size
 
-    @property
-    def size(self):
+    def get_size(self):
         """Get the size of the square"""
         return self.__size
 
-    @size.setter
-    def size(self, value):
+    def set_size(self, value):
         """Set the size of the square with validation
 
         Args:
@@ -31,6 +28,8 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    size = property(get_size, set_size)
 
     def area(self):
         """Return the current square area"""
