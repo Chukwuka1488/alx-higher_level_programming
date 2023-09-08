@@ -1,0 +1,29 @@
+>>> from 5-text_indentation import text_indentation
+
+# Test case 1: Basic input with period
+>>> text_indentation("This is a test. This is another test.")
+'This is a test.\n\nThis is another test.'
+
+# Test case 2: Basic input with question mark
+>>> text_indentation("How are you? I'm good. How about you?")
+'How are you?\n\nI\'m good.\n\nHow about you?'
+
+# Test case 3: Basic input with colon
+>>> text_indentation("First item: Apple. Second item: Banana. Third item: Cherry.")
+'First item:\n\nApple.\n\nSecond item:\n\nBanana.\n\nThird item:\n\nCherry.'
+
+# Test case 4: Input with multiple spaces
+>>> text_indentation("This   has  multiple    spaces.")
+'This   has  multiple    spaces.'
+
+# Test case 5: Input with newlines
+>>> text_indentation("Line 1\nLine 2")
+'Line 1\n\nLine 2'
+
+# Test case 6: Empty input
+>>> text_indentation("")
+''
+
+# Test case 7: Input with no punctuation
+>>> text_indentation("No punctuation here")
+'No punctuation here'
