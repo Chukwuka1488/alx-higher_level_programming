@@ -4,6 +4,7 @@ This module contains a function that returns the list of available attributes
 and methods of an object.
 """
 
+
 def lookup(obj):
     """
     Function to return a list of valid attributes and methods for an object.
