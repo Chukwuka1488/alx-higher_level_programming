@@ -43,7 +43,10 @@ class Base:
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation of list_objs to a file."""
         # Convert list_objs into list of dictionaries
-        list_dicts = [obj.to_dictionary() for obj in list_objs] if list_objs else []
+        if list_objs:
+            list_dicts = [obj.to_dictionary() for obj in list_objs]
+        else:
+            []
 
         # Use the static method to_json_string to convert the list of
         # dictionaries into a JSON string
@@ -103,7 +106,11 @@ class Base:
             writer = csv.writer(csvfile)
             if cls.__name__ == "Rectangle":
                 for obj in list_objs:
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([obj.id,
+                                     obj.width,
+                                     obj.height,
+                                     obj.x,
+                                     obj.y])
             elif cls.__name__ == "Square":
                 for obj in list_objs:
                     writer.writerow([obj.id, obj.size, obj.x, obj.y])
