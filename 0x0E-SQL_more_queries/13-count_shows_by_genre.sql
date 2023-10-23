@@ -1,4 +1,4 @@
--- Execute the SQL query to list genres and the number of shows linked to each
+-- Execute the SQL query to list genres.
 SELECT 
     tv_genres.genre AS genre,
     COUNT(tv_show_genres.show_id) AS number_of_shows
