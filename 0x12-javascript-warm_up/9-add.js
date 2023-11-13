@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 // Script that prints the addition of two integers
 
 function add(a, b) {

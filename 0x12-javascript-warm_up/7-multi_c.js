@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 // Script that prints "C is fun" x times, where x is the first argument
 
 const args = process.argv.slice(2);

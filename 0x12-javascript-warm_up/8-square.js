@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 // Script that prints a square of a given size without using repeat
 
 const args = process.argv.slice(2);
