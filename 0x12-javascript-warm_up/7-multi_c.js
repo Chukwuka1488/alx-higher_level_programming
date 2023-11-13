@@ -9,5 +9,5 @@ if (isNaN(numberOfTimes)) {
 } else {
   for (let i = 0; i < numberOfTimes; i++) {
     console.log('C is fun');
-    }
+  }
 }
