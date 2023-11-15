@@ -3,9 +3,9 @@
 
 const dict = require('./101-data.js').dict;
 
-let newDict = {};
+const newDict = {};
 
-for (let key in dict) {
+for (const key in dict) {
   if (newDict[dict[key]]) {
     newDict[dict[key]].push(key);
   } else {
