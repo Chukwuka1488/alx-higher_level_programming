@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetch and display all cities of a given state from the MySQL database hbtn_0e_4_usa."""
+"""Fetch and display all cities of a given state."""
 
 import sys
 import MySQLdb
