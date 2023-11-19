@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-
-"""
-    A script that lists all states from the database hbtn_0e_0_usa
-    Username, password and database names are given as user args
-"""
+"""Fetch and display states starting with 'N' from the MySQL database."""
 
 import sys
 import MySQLdb
@@ -23,8 +19,9 @@ if __name__ == "__main__":
                              user=username, passwd=password, db=database)
         cursor = db.cursor()
 
-        # Execute SQL query to retrieve states sorted by id
-        cursor.execute("SELECT * FROM states ORDER BY id ASC")
+        # Execute SQL query to retrieve states starting with 'N'
+        query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+        cursor.execute(query)
 
         # Fetch all results
         results = cursor.fetchall()
