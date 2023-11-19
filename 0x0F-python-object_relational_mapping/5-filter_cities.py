@@ -7,7 +7,8 @@ import MySQLdb
 if __name__ == "__main__":
     # Check for correct number of arguments
     if len(sys.argv) != 5:
-        print("Usage: {} username password database state_name".format(sys.argv[0]))
+        print("Usage: {} username password database state_name".format(
+            sys.argv[0]))
         sys.exit(1)
 
     # Retrieve arguments
@@ -31,7 +32,7 @@ if __name__ == "__main__":
             "JOIN states ON cities.state_id = states.id "
             "ORDER BY cities.id ASC"
         )
-        
+
         cursor.execute(query)
 
         # Fetch the result
