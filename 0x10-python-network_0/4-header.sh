@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # This script takes a URL as an argument, sends a GET request to that URL with a header variable, and displays the body of the response.
 
 url=$1
