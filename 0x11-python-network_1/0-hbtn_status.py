@@ -3,14 +3,17 @@
 This module fetches https://alx-intranet.hbtn.io/status using urllib
 """
 
-import urllib.request
+from urllib.request import Request, urlopen
 
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
+if __name__ == "__main__":
     """
     Fetches the URL and reads the response
     """
-    html = response.read()
-    print("Body response:")
-    print("\t- type: {}".format(type(html)))
-    print("\t- content: {}".format(html))
-    print("\t- utf8 content: {}".format(html.decode('utf-8')))
+    request = Request('https://alx-intranet.hbtn.io/status')
+
+    with urlopen(request) as response:
+        html = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(html)))
+        print("\t- content: {}".format(html))
+        print("\t- utf8 content: {}".format(html.decode('utf-8')))

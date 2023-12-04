@@ -3,11 +3,15 @@
 This module sends a request to a URL and displays the value of the X-Request-Id variable
 """
 
-import urllib.request
-import sys
+from urllib.request import Request, urlopen
+from sys import argv
 
-with urllib.request.urlopen(sys.argv[1]) as response:
+
+if __name__ == "__main__":
     """
     Sends a request to the URL and reads the response
     """
-    print(response.getheader('X-Request-Id'))
+    response = Request(argv[1])
+    with urlopen(response) as res:
+        headers = res.info()
+        print(headers.get('X-Request-Id'))
