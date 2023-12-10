@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This module sends a POST request to a URL with an email as a parameter and displays the body of the response.
 """

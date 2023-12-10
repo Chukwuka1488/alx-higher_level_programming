@@ -1,17 +1,17 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This module fetches https://alx-intranet.hbtn.io/status using urllib
 """
+import urllib.request
 
-from urllib.request import Request, urlopen
 
 if __name__ == "__main__":
     """
     Fetches the URL and reads the response
     """
-    request = Request('https://alx-intranet.hbtn.io/status')
+    request = urllib.request.Request('https://alx-intranet.hbtn.io/status')
 
-    with urlopen(request) as response:
+    with urllib.request.urlopen(request) as response:
         html = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))

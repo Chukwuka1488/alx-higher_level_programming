@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This module uses the GitHub API to display the 10 most recent commits of a repository by a user.
 """
